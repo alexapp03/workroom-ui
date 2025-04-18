@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import { WelcomeCard } from '@widgets/WelcomeCard';
+import { InputText, Button } from 'primevue';
 </script>
 
 <template>
   <main class="home-page">
-    <WelcomeCard
-      title="Welcome to WorkRoom"
-      description="Your modern CRM solution for managing customer relationships">
-      <p>Get started by exploring the dashboard and features.</p>
-      <div class="actions">
-        <button class="btn">Get Started</button>
-        <button class="btn btn-outline">Learn More</button>
-      </div>
-    </WelcomeCard>
+    <InputText placeholder="Placeholder" />
+
+    <div style="margin-top: 1rem">
+      <Button severity="success" label="Submit" />
+    </div>
   </main>
 </template>
 

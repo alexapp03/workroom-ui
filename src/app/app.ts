@@ -3,6 +3,9 @@ import { createPinia } from 'pinia';
 
 import App from './app.vue';
 import router from './router';
+import PrimeVue from 'primevue/config';
+import { customPreset } from './config';
+
 import './assets/styles/main.css';
 
 export function initializeApp() {
@@ -10,6 +13,14 @@ export function initializeApp() {
 
   app.use(createPinia());
   app.use(router);
+  app.use(PrimeVue, {
+    theme: {
+      preset: customPreset,
+      options: {
+        darkModeSelector: false
+      }
+    }
+  });
 
   return { app };
 }
